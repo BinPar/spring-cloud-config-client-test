@@ -6,6 +6,7 @@
     "node": ">=10"
   },
   "scripts": {
+    "startConfigServer": "docker run -it -p 8888:8888 -e JAVA_OPTS=-Dspring.cloud.config.server.git.uri=https://github.com/spring-cloud-samples/config-repo hyness/spring-cloud-config-server",
     "build": "tsc",
     "test": "jest",
     "test-dev": "NODE_ENV=development npx jest --watch",
@@ -28,6 +29,9 @@
   "homepage": "https://binpar.com",
   "dependencies": {
     "@types/jest": "^25.1.1",
+    "cloud-config-client": "^1.5.0",
+    "i": "^0.3.6",
+    "npm": "^6.13.7",
     "typescript": "^3.5.3"
   },
   "devDependencies": {

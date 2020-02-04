@@ -1,4 +1,4 @@
-# Spring Cloud Config Client test
+# Spring Cloud Config Client Testing Repo
 
 Cliente para testear Spring Cloud Config desde node empleando la librearía [cloud-config-client](https://www.npmjs.com/package/cloud-config-client).
 
@@ -14,4 +14,12 @@ Este proyecto surge como parte de la investigación realizada en el [issue #68 d
 
 ### Arranque del Spring Config Server
 
-Para iniciar
+Para iniciar el Spring Config Server ejecutaremos:
+
+```terminal
+npm run startConfigServer
+```
+
+Esto iniciará nuestro servidor de configuración de string en [localhost:8888](http://localhost:8888).
+
+> **Nota:** En caso de realizar una petición http al raíz del config server nos retornará una *Whitelabel Error Page* genérica.
