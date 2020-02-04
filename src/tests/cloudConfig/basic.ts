@@ -3,7 +3,7 @@ import * as client from 'cloud-config-client';
 test('Connect to Cloud Config Server', async (): Promise<void> => {
   const result = await client.load({
     endpoint: 'http://localhost:8888',
-    name: 'application',
+    name: 'eureka',
   });
 
   if (result instanceof Error) {
@@ -11,8 +11,10 @@ test('Connect to Cloud Config Server', async (): Promise<void> => {
     throw error;
   } else {
     const config = result as client.Config;
-    const value1 = config.get('eureka.password');
-    console.log(value1);
-    expect(1 + 2).toBe(3);
+    // config.properties tiene que tener más de las 3 propiedades por defecto
+    expect(Object.keys(config.properties).length).toBeGreaterThan(3);
+    // defaultZone tiene que ser 'http://localhost:8761/eureka/'
+    const defaultZone = config.get('eureka.client.serviceUrl.defaultZone');
+    expect(defaultZone).toBe('http://localhost:8761/eureka/');
   }
 });
