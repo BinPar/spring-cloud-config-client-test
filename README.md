@@ -61,7 +61,7 @@ Cosas aprendidas en el proceso:
 - Acceso a repo privado (requisito lógico) mediante uso de [private key](https://github.com/spring-cloud/spring-cloud-config/blob/master/docs/src/main/asciidoc/spring-cloud-config.adoc#git-ssh-configuration-using-properties) con **user impersonation**
 - Si una aplicación tiene acceso, puede ver todas las aplicaciones / instancias (no hay principio de aislamiento)
 - Ausencia de un modelo opinionado para entornos
-- Sincronización mediante un **pool** con tiempo configurable de de **git pools** y no mediante desencadenadores (Webhooks)
+- Sincronización mediante un **pooling** con tiempo configurable de de **git pull** y no mediante desencadenadores (Webhooks)
 - La librería cliente de node es muy limitada:
   - No permite obtener cambios
   - Obtiene propiedades discretas y no objetos ('config.database.port' en vez de 'config.database' y luego poder emplear database.port)
