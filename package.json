@@ -6,7 +6,7 @@
     "node": ">=10"
   },
   "scripts": {
-    "startConfigServer": "docker run -it -p 8888:8888 -e JAVA_OPTS=-Dspring.cloud.config.server.git.uri=https://github.com/spring-cloud-samples/config-repo hyness/spring-cloud-config-server",
+    "startConfigServer": "docker run -it -p 8888:8888  -v $(pwd)/config/application.yml:/config/application.yml hyness/spring-cloud-config-server",
     "build": "tsc",
     "test": "jest",
     "test-dev": "NODE_ENV=development npx jest --watch",
