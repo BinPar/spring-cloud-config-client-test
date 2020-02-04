@@ -1,7 +1,7 @@
 {
-  "name": "ts-node-boilerplate",
+  "name": "spring-cloud-config-client-test",
   "version": "0.3.19",
-  "description": "Node Boilerplate from BinPar TypeScript Projects",
+  "description": "Cliente para testear Spring Cloud Config desde node",
   "engines": {
     "node": ">=10"
   },
